@@ -11,9 +11,9 @@ import org.json.JSONObject;
 
 public interface DataBaseConnect {
     default Connection establish_connection() throws SQLException, ClassNotFoundException {
-        String url="jdbc:mysql://localhost:3306/BankSystem";
+        String url="jdbc:mysql://b15ac2a343b8b9:35b36f26@eu-cdbr-west-02.cleardb.net/heroku_9bd1e1239aac862?reconnect=true";
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection= DriverManager.getConnection(url,"root","root");
+        Connection connection= DriverManager.getConnection(url,"b15ac2a343b8b9","35b36f26");
         return connection;
     }
     ArrayList<Customer> listAll() throws SQLException, ClassNotFoundException;
