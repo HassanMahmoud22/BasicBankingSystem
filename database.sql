@@ -29,7 +29,7 @@ CREATE TABLE `customers` (
   `phone_number` varchar(11) NOT NULL,
   `current_balance` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `transfers` (
   KEY `Receiver` (`Receiver`),
   CONSTRAINT `transfers_ibfk_1` FOREIGN KEY (`Sender`) REFERENCES `customers` (`id`),
   CONSTRAINT `transfers_ibfk_2` FOREIGN KEY (`Receiver`) REFERENCES `customers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
