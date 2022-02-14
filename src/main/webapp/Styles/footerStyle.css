@@ -1,0 +1,33 @@
+.footer {
+    background-color: #000000;
+    display:grid;
+    grid-template-columns: repeat(45, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column: 1/6;
+    grid-row: 10;
+    box-shadow: 12px 0 30px 0 black;
+}
+.fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20%;
+    color: white;
+    display: inline-block;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.social{
+    white-space: nowrap;
+    overflow-x: auto;
+    grid-column: 22/29;
+    grid-row: 3/10;
+}
+#copyright{
+    grid-column: 15/40;
+    grid-row: 2;
+    color: white;
+}
