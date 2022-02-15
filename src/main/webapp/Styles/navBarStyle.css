@@ -19,9 +19,6 @@ navBar * {
 
 navBar li {
     margin: 20px;
-    border-style: solid;
-    border-bottom: black;
-
 }
 
 navBar li a {
