@@ -15,6 +15,7 @@
             </div>
             <div class="main">
                 <p>Basic Banking System Task</p>
+                <button id="start" onclick="location.href='viewAllCustomers.jsp'"> Get Started</button>
             </div>
             <div class="footer">
                 <%@ include file="footer.html" %>
