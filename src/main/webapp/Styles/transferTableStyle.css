@@ -35,7 +35,7 @@
     grid-column: 2/19;
     grid-row: 2/19;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
