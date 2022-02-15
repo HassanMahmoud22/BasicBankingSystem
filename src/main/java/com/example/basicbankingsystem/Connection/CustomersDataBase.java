@@ -16,7 +16,6 @@ public class CustomersDataBase implements DataBaseConnect{
         ResultSet rs = statement.executeQuery("select * from Customers");
         while(rs.next())
         {
-            Customer customer = new Customer();
             customer.setId(rs.getInt("id"));
             customer.setName(rs.getString("Name"));
             customer.setEmail(rs.getString("Email"));
@@ -31,9 +30,9 @@ public class CustomersDataBase implements DataBaseConnect{
     public JSONArray listAllTransfers() throws SQLException, ClassNotFoundException {
         JSONArray allTransactions = new JSONArray();
         Statement statement = establish_connection().createStatement();
-        ResultSet rs = statement.executeQuery("select transfers.id as Transfer_Id, transfers.transfer_date, transfers.sender as Sender_Id, u1.name as Sender, transfers.receiver as Receiver_Id, u2.name as Receiver, transfers.amount as Amount\n" +
-                "from transfers\n" +
-                "inner join customers u1 on u1.id = transfers.sender\n" +
+        ResultSet rs = statement.executeQuery("select transfers.id as Transfer_Id, transfers.transfer_date, transfers.sender as Sender_Id, " +
+                "u1.name as Sender, " + "transfers.receiver as Receiver_Id, u2.name as Receiver, transfers.amount as Amount\n" +
+                "from transfers\n" + "inner join customers u1 on u1.id = transfers.sender\n" +
                 "inner join customers u2 on u2.id = transfers.receiver\n" +
                 "order by transfers.Transfer_Date ASC;");
         while(rs.next())

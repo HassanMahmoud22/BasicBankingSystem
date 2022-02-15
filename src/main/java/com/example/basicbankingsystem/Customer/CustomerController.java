@@ -39,6 +39,4 @@ public class CustomerController implements CustomerService{
     public String viewAllTransfers() throws SQLException, ClassNotFoundException {
         return dataBase.listAllTransfers().toString();
     }
-
-
 }

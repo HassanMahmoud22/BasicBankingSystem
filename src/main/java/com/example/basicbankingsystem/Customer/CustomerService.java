@@ -1,7 +1,5 @@
 package com.example.basicbankingsystem.Customer;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.sql.SQLException;
